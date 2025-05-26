@@ -50,4 +50,17 @@ JavaScript (basic)	        Show alerts, toggle forms, confirmation dialogs
 Git & GitHub	            Version control + deployable showcase for TCS
 Deployment (optional)	    PythonAnywhere / Render for online demo
 
+🧠 Overall Plan
+🔧 Django Project: ats_system
+📦 Apps to Create:
+App Name	                            Purpose
+users	                        Handles login, registration, user roles
+jobs	                        HR creates jobs, candidates view & apply
+applications	                Stores resumes, tracks status, shortlist/emailing
+core (optional)	              Common models/templates/static files if needed
+
+
+what am i doing from now :
+  fir creating a project djangoo startproject 
+
 commit
