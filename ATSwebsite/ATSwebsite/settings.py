@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hr'
+    'hr',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +69,10 @@ TEMPLATES = [
         },
     },
 ]
+
+# This is for the crispy forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 WSGI_APPLICATION = 'ATSwebsite.wsgi.application'
 
@@ -125,3 +132,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/login/'
