@@ -1,0 +1,12 @@
+{% extends 'hr/base.html'%}
+{% load crispy_forms_tags %}
+{% block title %}Job Application{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-warning p-4">
+        <h2>Deadline Passed</h2>
+        <p>Sorry, the application deadline for <strong>{{ job.title }}</strong> has passed.</p>
+    </div>
+</div>
+{% endblock %}

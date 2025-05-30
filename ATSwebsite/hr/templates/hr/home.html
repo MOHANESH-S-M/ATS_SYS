@@ -19,14 +19,13 @@
                         <p class="card-text"><small class="text-muted">Deadline :{{ job.deadline}}</small></p>
                         <p>
                             Public Apply Link: <br>
-                            <a href="{% url 'create-job'%}" target="_blank" class="text-decoration-none">
-                            link not yet gen
-                            </a>
+                             <a href="http://127.0.0.1:8000/applicants/apply/{{ job.slug }}/" target="_blank" class="text-decoration-none">
+                            http://127.0.0.1:8000/applicants/apply/{{ job.slug }}/ </a>
                         </p>
                     </div>
                     <div class="card-footer d-flex justify-content-between">
-                        <a href="{% url 'create-job'%}" class="btn btn-sm btn-outline-secondary">Edit the url move to create job</a>
-                        <a href="{% url 'create-job'%}" class="btn btn-sm btn-outline-danger">delete mv to create job</a>
+                        <a href="{% url 'editjob' job.slug %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        <a href="{% url 'deletejob' job.slug %}" class="btn btn-sm btn-outline-danger">delete</a>
                     </div>
                 </div>
             </div>

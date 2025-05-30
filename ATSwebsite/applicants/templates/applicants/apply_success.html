@@ -1,0 +1,12 @@
+{% extends 'hr/base.html'%}
+{% load crispy_forms_tags %}
+{% block title %}Job Application{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h1 class="mb-4">Thank You!</h1>
+        <h2 class="mb-3 ">the Application for {{ job.title }} is submitted Successfully.</h2>
+    </div>
+</div>
+{% endblock %}
