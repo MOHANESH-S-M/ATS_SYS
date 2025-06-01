@@ -5,16 +5,16 @@ what this projcet do:
   i.e sortlistes candidates top match and send mails to every cabdidate email
 
 Django Module        	Why You Need It
-models.py	            Create Job & Candidate tables
-views.py	            Handle logic for HR and Candidate actions
-urls.py             	Route HR and Candidate URLs
+models.py	              Create Job & Candidate tables
+views.py	              Handle logic for HR and Candidate actions
+urls.py             	  Route HR and Candidate URLs
 templates/	            Display pages (forms, job lists, top 10, etc.)
-forms.py	            Handle registration/update forms
-admin.py	            Manage Job & Candidate from admin panel
+forms.py	              Handle registration/update forms
+admin.py	              Manage Job & Candidate from admin panel
 signals.py	            (Optional) Send email after saving model
-middleware.py	        (Optional) Restrict access post-deadline
-auth	                User registration, login, logout
-messages	            Show success/warning messages after forms
+middleware.py	          (Optional) Restrict access post-deadline
+auth	                  User registration, login, logout
+messages	              Show success/warning messages after forms
 static & media	        Serve resumes, CSS, JS, and logo files
 
 ✅ 2. Third-Party Django Packages to Learn
@@ -22,7 +22,7 @@ Package	Usage
 
 django-crispy-forms	        Better-looking form rendering
 django-environ	            Manage environment variables (secret keys, DB, etc.)
-django-filter	            Add filters to the HR dashboard
+django-filter	              Add filters to the HR dashboard
 django-cleanup	            Auto-delete old resume files
 
 bash
@@ -33,25 +33,26 @@ pip install django-crispy-forms django-environ django-filter django-cleanup
 ✅ 3. Python Libraries to Parse & Score Resumes
 Library	Usage
 pyresparser	                Extract name, skills, experience from resumes
-pdfminer.six	            Extract text from PDF resumes
-docx	                    Extract text from DOCX files (optional)
-nltk	                    Preprocessing for better text analysis
-spacy	                    Named Entity Recognition (skills, organizations)
-scikit-learn	            TF-IDF vectorization + Cosine similarity scoring
-uuid	                    Generate unique links for job postings
-datetime	                Compare deadlines for jobs
+pdfminer.six	              Extract text from PDF resumes
+docx	                      Extract text from DOCX files (optional)
+nltk	                      Preprocessing for better text analysis
+spacy	                      Named Entity Recognition (skills, organizations)
+scikit-learn	              TF-IDF vectorization + Cosine similarity scoring
+uuid	                      Generate unique links for job postings
+datetime	                  Compare deadlines for jobs
 smtplib / Django Email	    Send shortlist emails to candidates
 
 ✅ 4. Other Web Dev Skills to Learn
 Topic	Why?
-HTML/CSS	                Build clean forms and tables
-Bootstrap or Tailwind	    Make it mobile responsive and clean
+HTML/CSS	                  Build clean forms and tables
+Bootstrap or Tailwind	      Make it mobile responsive and clean
 JavaScript (basic)	        Show alerts, toggle forms, confirmation dialogs
-Git & GitHub	            Version control + deployable showcase for TCS
-Deployment (optional)	    PythonAnywhere / Render for online demo
+Git & GitHub	              Version control + deployable showcase for TCS
+Deployment (optional)	      PythonAnywhere / Render for online demo
 
 🧠 Overall Plan
 🔧 Django Project: ats_system
+
 📦 Apps to Create:
 App Name	                            Purpose
 users	                        Handles login, registration, user roles
@@ -59,8 +60,11 @@ jobs	                        HR creates jobs, candidates view & apply
 applications	                Stores resumes, tracks status, shortlist/emailing
 core (optional)	              Common models/templates/static files if needed
 
+HR         : Login → Create Job → Get Job Link → Share → View Applicants → Shortlist → Send Emails  
+Candidate  : Open Link → Register → Edit/Delete (Before Deadline) → Wait for Email  
+
 
 what am i doing from now :
   fir creating a project djangoo startproject 
-
+  
 commit
