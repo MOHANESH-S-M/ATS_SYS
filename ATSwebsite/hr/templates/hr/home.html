@@ -5,7 +5,7 @@
 {% block content%}
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>Welcome {{ request.user.username }}</h2>
+        <h2>Welcome, {{ request.user.username }}!</h2>
         <a href="{% url 'create-job' %}" class ="btn btn-primary"> Create New Job</a>
     </div>
 
@@ -19,9 +19,14 @@
                         <p class="card-text"><small class="text-muted">Deadline :{{ job.deadline}}</small></p>
                         <p>
                             Public Apply Link: <br>
-                             <a href="http://127.0.0.1:8000/applicants/apply/{{ job.slug }}/" target="_blank" class="text-decoration-none">
+                            <a href="http://127.0.0.1:8000/applicants/apply/{{ job.slug }}/" target="_blank" class="text-decoration-none">
                             http://127.0.0.1:8000/applicants/apply/{{ job.slug }}/ </a>
                         </p>
+                    </div>
+                    <div class="d-flex flex-column gap-2 mt-3 sm ">
+                        <a href="{% url 'analyse-ats' job.id %}" class="btn btn-warning btn-sm">
+                            Analyse Applicants
+                        </a>
                     </div>
                     <div class="card-footer d-flex justify-content-between">
                         <a href="{% url 'editjob' job.slug %}" class="btn btn-sm btn-outline-secondary">Edit</a>
