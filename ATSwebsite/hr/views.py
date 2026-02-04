@@ -27,15 +27,17 @@ def createjob(request):
 
 @login_required(login_url='login')
 def editjob(request,slug):
-    job = get_object_or_404(jobpost,slug=slug,hr=request.user)
+    job = get_object_or_404(jobpost, slug=slug, hr=request.user)
+
     if request.method == 'POST':
-        form = jobpostForm(request.POST,instance = job)
+        form = jobpostForm(request.POST, instance=job)
         if form.is_valid():
             form.save()
             return redirect('home')
     else:
-        form = jobpostForm(instance = job)
-        return render(request ,"hr/editjob.html",{"form":form})
+        form = jobpostForm(instance=job)
+
+    return render(request, "hr/editjob.html", {"form": form})
 
 
 @login_required(login_url='login')

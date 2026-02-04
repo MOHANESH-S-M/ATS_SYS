@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+
 load_dotenv()
 
 
@@ -94,7 +95,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
     }
-}
+}   
 
 
 # Password validation
@@ -162,5 +163,5 @@ ALLOWED_HOSTS = ['*']
 # Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
+LOGIN_URL = '/users/login/'
+LOGOUT_REDIRECT_URL = '/users/login/'

@@ -12,7 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 # this is for job apply
 def apply_to_job(request,slug):
     job = get_object_or_404(jobpost,slug=slug)
-    if not job.is_expired():
+    if job.is_expired():
         return render(request,'applicants/job_expired.html',{"job":job})
     if request.method == "POST":
         form = ApplicationForm(request.POST,request.FILES)
@@ -25,8 +25,6 @@ def apply_to_job(request,slug):
     else:
         form = ApplicationForm()
     return render(request,"applicants/apply_form.html",{"form":form ,"job":job})
-
-
 # This is only to produce success
 def apply_success(request):
     return render(request ,'applicants/apply_success.html')
