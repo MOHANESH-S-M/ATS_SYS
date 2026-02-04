@@ -17,7 +17,7 @@ auth	                  User registration, login, logout
 messages	              Show success/warning messages after forms
 static & media	        Serve resumes, CSS, JS, and logo files
 
-✅ 2. Third-Party Django Packages to Learn
+ 2. Third-Party Django Packages to Learn
 Package	Usage
 
 django-crispy-forms	        Better-looking form rendering
@@ -30,7 +30,7 @@ Copy
 Edit
 pip install django-crispy-forms django-environ django-filter django-cleanup
 
-✅ 3. Python Libraries to Parse & Score Resumes
+ 3. Python Libraries to Parse & Score Resumes
 Library	Usage
 pyresparser	                Extract name, skills, experience from resumes
 pdfminer.six	              Extract text from PDF resumes
@@ -42,7 +42,7 @@ uuid	                      Generate unique links for job postings
 datetime	                  Compare deadlines for jobs
 smtplib / Django Email	    Send shortlist emails to candidates
 
-✅ 4. Other Web Dev Skills to Learn
+ 4. Other Web Dev Skills to Learn
 Topic	Why?
 HTML/CSS	                  Build clean forms and tables
 Bootstrap or Tailwind	      Make it mobile responsive and clean
@@ -50,10 +50,10 @@ JavaScript (basic)	        Show alerts, toggle forms, confirmation dialogs
 Git & GitHub	              Version control + deployable showcase for TCS
 Deployment (optional)	      PythonAnywhere / Render for online demo
 
-🧠 Overall Plan
-🔧 Django Project: ats_system
+ Overall Plan
+ Django Project: ats_system
 
-📦 Apps to Create:
+Apps to Create:
 App Name	                            Purpose
 users	                        Handles login, registration, user roles
 jobs	                        HR creates jobs, candidates view & apply
